@@ -2,6 +2,7 @@ import json
 
 databaza = {}
 
+
 def save_databaza():
     with open("databaza.json", "w") as f:
         json.dump(databaza, f)
