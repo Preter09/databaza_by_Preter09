@@ -1,9 +1,6 @@
 import json
 
-databaza = {
-    "Name": "",
-    "Password": "",
-}
+databaza = {}
 
 def save_databaza():
     with open("databaza.json", "w") as f:
