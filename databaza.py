@@ -1,8 +1,8 @@
 import json
 
 databaza = {
-    "Name": "",
-    "Password": "",
+    "Name": "Admin",
+    "Password": "admin123",
 }
 
 def save_databaza():
