@@ -16,7 +16,7 @@ def load_databaza():
         pass
 
 # Call this at the start of your script
-load_databaza()
+
 # After successful registration, call save_databaza()
 def register():
     print("Welcome!")
@@ -42,15 +42,18 @@ def login():
         print("Invalid credentials.")
         return False
 
-load_databaza
+load_databaza()
 
-ask = input("Do you want to register or login? (r/l): ")
+if __name__ == "__main__":
+    
+
+    ask = input("Do you want to register or login? (r/l): ")
 
 
-if  ask == "r" or ask == "R":
-    register()
-elif ask == "l" or ask == "L":
-    login()
-else:
-    print("Error")
-    exit()
+    if  ask == "r" or ask == "R":
+        register()
+    elif ask == "l" or ask == "L":
+        login()
+    else:
+        print("Error")
+        exit()
