@@ -1,4 +1,5 @@
 import json
+from passwordgenerator import PasswordGenerator as gen
 
 databaza = {}
 
@@ -21,12 +22,18 @@ def load_databaza():
 def register():
     print("Welcome!")
     registerName = input("Enter your name: ")
-    registerPassword = input("Enter your password: ")
+    ask = input("Do you want to generate a password? (y/n): ")
+    if ask.lower() == "y" or ask.upper() == "Y":
+        pasword_gen = gen()
+        registerPassword = pasword_gen.generator()
+        print(f"Generated password: {registerPassword}")
+    else:
+        registerPassword = input("Enter your password: ")
     if registerName in databaza:
         print("Name already exists.")
         return False
     else:
-        databaza[registerName] = registerPassword
+        databaza[registerName] = registerPassword 
         save_databaza()
         print("Registration successful!")
         return True
